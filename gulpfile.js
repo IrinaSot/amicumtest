@@ -9,7 +9,6 @@ var sourcemap = require("gulp-sourcemaps");
 var rename = require("gulp-rename");
 
 var postcss = require("gulp-postcss");
-/*var posthtml = require("gulp-posthtml");*/
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
@@ -26,7 +25,7 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename("style.min.css"))
+    .pipe(rename("style.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -38,9 +37,8 @@ gulp.task("js", function () {
     .pipe(rename({
       suffix: ".min",
     }))
-    .pipe(gulp.dest("build/js"))
-    .pipe(server.stream());
-});
+    .pipe(gulp.dest("build/js"));
+    });
 
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
