@@ -1,0 +1,284 @@
+.popup {
+  display: none;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  width: 714px;
+  background-color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.popup__title-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  margin: 0 auto;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.popup__title {
+  @include indent-reset;
+  @include font-param;
+  align-items: center;
+  color: #ffffff;
+}
+
+.popup__title-wrap--green {
+  background-color: #4D897C;
+}
+
+.popup__title-wrap--blue {
+  background-color: #56698F;
+  padding-left: 11px;
+}
+
+.popup__content-wrap {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #ffffff;
+  text-align: start;
+}
+
+.popup__button-close {
+  position: absolute;
+  padding: 0;
+  right: 12px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: inherit;
+
+  cursor: pointer;
+  border: none;
+  outline: 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: none;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: ' ';
+    left: 12px;
+    top: 0;
+    height: 18px;
+    width: 2px;
+    background-color: #ffffff;
+    border: none;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.5;
+  }
+}
+
+.popup__button-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  right: -2px;
+  bottom: -32px;
+  text-decoration: none;
+}
+
+.popup__button-item {
+
+  margin: 0;
+  padding: 0;
+  min-height: 30px;
+  list-style: none;
+  background: linear-gradient(59deg, transparent 16px, #4D897C 16px 184px, transparent 184px 16px);
+  margin-right: -14px;
+}
+
+.popup__button-item--update,
+.popup__button-item--wish {
+  position: relative;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    width: 196px;
+    height: 30px;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    z-index: -1;
+    background-color: #4D897C;
+    transform: skew(30deg);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+.popup__button-item--add {
+  position: relative;
+  background: linear-gradient(59deg, transparent 16px, #56698F 16px);
+  margin-right: 0;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    width: 181px;
+    height: 30px;
+    top: 0;
+    left: 16px;
+    bottom: 0;
+    z-index: -1;
+    transform: skew(0deg);
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+.popup__button-item--save {
+  position: relative;
+  background: linear-gradient(59deg, transparent 16px, #56698F 16px);
+  margin-right: 0;
+}
+
+
+.popup__button {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 6px 0px 4px 46px;
+  width: 214.5px;
+
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+
+  border: none;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.popup__button--update::before {
+  content: " ";
+  position: absolute;
+  top: 5px;
+  left: 36px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 23px;
+  height: 19px;
+  margin-right: 8px;
+  background-image: url(../img/archive.svg);
+  background-repeat: no-repeat;
+}
+
+.popup__button-item--wish {
+  background: linear-gradient(59deg, transparent 16px, #598D9B 16px 184px, transparent 184px 16px);
+}
+
+.popup__button--wish::before {
+  content: " ";
+  position: absolute;
+  left: 34px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 23px;
+  height: 19px;
+  margin-right: 8px;
+  background-image: url(../img/archive.svg);
+  background-repeat: no-repeat;
+}
+
+
+.popup__button--add-wish {
+  position: relative;
+  width: 196.5px;
+  background-color: inherit;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    top: 3px;
+    left: 44px;
+    width: 26px;
+    height: 21px;
+    background-image: url(../img/add_wish.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.popup__button-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 23px;
+  height: 19px;
+  margin-right: 8px;
+}
+
+.popup__button-icon--add {
+  width: 26px;
+  height: 21px;
+}
+
+.popup__button--save {
+  position: relative;
+  width: 171px;
+  padding-left: 55px;
+}
+
+.popup__button--save::before {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: 37px;
+  width: 30px;
+  height: 30px;
+
+  background-image: url(../img/save.png);
+  background-repeat: no-repeat;
+}
+
+.popup__button-icon--wish {
+  margin-right: 12px;
+  margin-left: -4px;
+}
+
+.popup__button--save::after {
+  box-shadow: none;
+}
+
+.popup--show {
+  display: block;
+  position: fixed;
+}

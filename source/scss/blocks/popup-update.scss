@@ -1,0 +1,23 @@
+.popup-update {
+   background-color: #4D897C;
+  border: 2px solid #4D897C;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.popup-update__text-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 27px 33px 29px 25px;
+}
+
+.popup-update__text {
+  margin: 0;
+  margin-right: 5px;
+}
+
+.popup-update__list {
+  margin: 0;
+  padding: 0 20px 43px 52px;
+  font-style: italic;
+}

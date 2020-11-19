@@ -1,0 +1,45 @@
+.popup-notification {
+  width: 758px;
+  padding-left: 73px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #4D897C;
+  box-sizing: border-box;
+}
+
+.popup-notification__text {
+  @include indent-reset;
+  font-family: $ff-arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 21px;
+    top: 15px;
+    left: 26px;
+
+    background-image: url(../img/vector.svg);
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+}
+
+.popup-notification__close {
+  width: 21.5px;
+  height: 21.5px;
+  right: 28px;
+  top: 15px;
+
+  &::before,
+  &::after {
+    height: 21.5px;
+  }
+}

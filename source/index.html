@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>AMICUM</title>
+  <link href="css/style.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+</head>
+
+<body>
+  <header class="page-header">
+    <h1 class="visually-hidden">Стартовая страница</h1>
+  </header>
+  <main class="page-main">
+   <!-- <button class="button" type="submit">Информация об обновлениях</button>
+  -->
+    <section class="popup-update popup popup--show">
+      <div class="popup__title-wrap popup__title-wrap--green">
+        <h2 class="popup__title">Информация об обновлениях</h2>
+        <button class="popup__button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
+      <div class="popup__content-wrap">
+        <div class="popup-update__text-wrap">
+          <p class="popup-update__text">Дата последних обновлений:</p>
+          <time class="popup-update__date" datetime="2020-08-21T08:00:00">21.08.2020 08:00:00</time>
+        </div>
+        <ol class="popup-update__list">
+          <li class="popup-update__item">Исправлены все ошибки в модуле №1</li>
+          <li class="popup-update__item">Исправлены все ошибки в модуле №2</li>
+          <li class="popup-update__item">Исправлены все ошибки в модуле №3</li>
+          <li class="popup-update__item">Исправлены все ошибки вмодуле №4</li>
+          <li class="popup-update__item">Исправлены все ошибки в модуле №5</li>
+        </ol>
+      </div>
+      <ul class="popup__button-wrap">
+        <li class="popup__button-item popup__button-item--update">
+          <a class="popup__button popup__button--update" href="update.min.html" target="_blank">
+             Архив обновлений</a> </li>
+        <li class="popup__button-item popup__button-item--wish">
+          <a class="popup__button popup__button--wish" href="wish.min.html" target="_blank">
+            Архив пожеланий</a></li>
+        <li class="popup__button-item popup__button-item--add ">
+          <button type="button" class="popup__button popup__button--add-wish">
+            + Пожелание</button> </li>
+      </ul>
+    </section>
+
+    <section class="popup-wish popup">
+      <div class="popup__title-wrap popup__title-wrap--blue">
+        <h2 class="popup__title">Добавить пожелание</h2>
+        <button class="popup__button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
+      <form class="popup-wish__form">
+        <textarea class="popup-wish__text" name="comment" id="comment-field" rows="9"
+          placeholder="Комментарий"></textarea>
+        <label class="visually-hidden" for="comment-field"></label>
+        <ul class="popup__button-wrap popup-wish__button-wrap">
+          <li class="popup__button-item popup__button-item--save ">
+            <button class="popup__button popup__button--save popup__button--add-wish" type="submit">
+              Сохранить</button>
+          </li>
+        </ul>
+      </form>
+    </section>
+
+    <section class="popup-notification popup">
+      <h2 class="popup-notification__title visually-hidden">Уведомление о сохранении данных</h2>
+      <p class="popup-notification__text">Данные успешно сохранены!</p>
+      <button class="popup-notification__close popup__button-close" type="button"><span
+          class="visually-hidden">Закрыть</span></button>
+    </section>
+
+  </main>
+  <script src="js/popup.js"></script>
+</body>
+
+</html>

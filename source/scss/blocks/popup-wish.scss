@@ -1,0 +1,43 @@
+.popup-wish {
+  background-color: #56698F;
+  border: 2px solid #56698F;
+}
+
+.popup-wish__form {
+  margin: 0;
+  padding: 18px 20px 17px 18px;
+  background-color: #ffffff;
+}
+
+.popup-wish__text {
+  min-width: 680px;
+  resize: none;
+  outline: none;
+  border: 1px solid #cccccc;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-top: 13px;
+  padding-left: 23px;
+  padding-bottom: 7px;
+  box-sizing: border-box;
+}
+
+.popup-wish__text::placeholder {
+  padding-top: 80px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  color: #CACACA;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+}
